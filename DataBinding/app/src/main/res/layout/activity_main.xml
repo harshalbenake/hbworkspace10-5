@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.harshalbenake.databinding.MainActivity.Utils"/>
+        <variable
+            name="dataPojo"
+            type="com.harshalbenake.databinding.DataPojo" />
+        <variable name="presenter" type="com.harshalbenake.databinding.Presenter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Utils.appendSurname(dataPojo.name),default=nameXML}" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{dataPojo.email,default=emailXML}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="HBBlogs"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> presenter.onSaveClick(view,dataPojo)}" />
+    </LinearLayout>
+</layout>
