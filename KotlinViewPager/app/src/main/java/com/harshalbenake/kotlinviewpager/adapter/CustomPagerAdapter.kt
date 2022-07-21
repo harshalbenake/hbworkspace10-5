@@ -3,8 +3,6 @@ package com.harshalbenake.kotlinviewpager.adapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.caressa.libs.leaderboard.ui.fragments.FirstFragment
-import com.caressa.libs.leaderboard.ui.fragments.SecondFragment
 
 class CustomPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
 
