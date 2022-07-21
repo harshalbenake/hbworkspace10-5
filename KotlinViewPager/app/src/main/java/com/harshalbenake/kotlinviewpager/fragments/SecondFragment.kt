@@ -1,4 +1,4 @@
-package com.caressa.libs.leaderboard.ui.fragments
+package com.harshalbenake.kotlinviewpager
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
